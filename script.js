@@ -15,8 +15,8 @@ submit.addEventListener('click',()=>{
         UserName:usernameField.value,
         Password:passwordField.value,
     },
-    function(){
-        if(usernameField.value !== 'hello' && passwordField.value !== 'world'){
+    function(response){
+        if(response.ErrCode === 1){
             alert("Incorrect password and credentials, login failed");
         }
         else{
